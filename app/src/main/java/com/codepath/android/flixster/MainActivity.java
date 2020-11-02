@@ -1,11 +1,11 @@
 package com.codepath.android.flixster;
 
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.util.Log;
 
 import com.codepath.android.flixster.adapters.MovieAdapter;
 import com.codepath.android.flixster.models.Movie;
@@ -54,9 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.e(TAG, "Hit json exception", e);
                     e.printStackTrace();
                 }
-
             }
-
             @Override
             public void onFailure(int i, Headers headers, String s, Throwable throwable) {
                 Log.d(TAG, "onFailure");
